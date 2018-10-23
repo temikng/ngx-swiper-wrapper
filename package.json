@@ -35,7 +35,7 @@
     "url": "https://github.com/zefoy/ngx-swiper-wrapper.git"
   },
   "dependencies": {
-    "swiper": "^4.4.0"
+    "swiper": "temikng/swiper#translate-to-margin"
   },
   "devDependencies": {
     "@angular/cli": "^7.0.0",
@@ -47,7 +47,6 @@
     "@angular-devkit/build-ng-packagr": "^0.10.0",
     "@angular-devkit/build-angular": "^0.10.0",
     "@types/node": "^8.10.0",
-    "@types/swiper": "^4.2.0",
     "codelyzer": "^4.5.0",
     "core-js": "^2.5.0",
     "cpx": "^1.5.0",
