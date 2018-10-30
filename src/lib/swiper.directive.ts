@@ -232,14 +232,14 @@ export class SwiperDirective implements AfterViewInit, OnDestroy, DoCheck, OnCha
     }
   }
 
-  public update(): void {
-    setTimeout(() => {
+  public update(doAfter?: Function): void {
+    // setTimeout(() => {
       if (this.instance) {
         this.zone.runOutsideAngular(() => {
           this.instance.update();
         });
       }
-    }, 0);
+    // }, 0);
   }
 
   public getIndex(real?: boolean): number {
