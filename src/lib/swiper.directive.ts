@@ -195,7 +195,7 @@ export class SwiperDirective implements AfterViewInit, OnDestroy, DoCheck, OnCha
 
         this.ngAfterViewInit();
 
-        this.update();
+        // this.update();
       }
     }
   }
@@ -232,14 +232,13 @@ export class SwiperDirective implements AfterViewInit, OnDestroy, DoCheck, OnCha
     }
   }
 
-  public update(): void {
-    setTimeout(() => {
-      if (this.instance) {
-        this.zone.runOutsideAngular(() => {
-          this.instance.update();
-        });
-      }
-    }, 0);
+  public update(slideIndex?: number): void {
+    // console.log('NgxSwiper update', this);
+    if (this.instance) {
+      this.zone.runOutsideAngular(() => {
+        this.instance.update(slideIndex);
+      });
+    }
   }
 
   public getIndex(real?: boolean): number {
